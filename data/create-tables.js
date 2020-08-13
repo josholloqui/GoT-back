@@ -20,6 +20,7 @@ async function run() {
                 CREATE TABLE got (
                     id SERIAL PRIMARY KEY NOT NULL,
                     name VARCHAR(512) NOT NULL,
+                    image_url VARCHAR(512) NOT NULL,
                     number_of_kids INTEGER NOT NULL,
                     killed_off BOOLEAN NOT NULL,
                     house VARCHAR(144) NOT NULL,

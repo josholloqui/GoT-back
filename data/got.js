@@ -1,6 +1,7 @@
 module.exports = [
   {
     name: 'Ned Stark',
+    image_url: 'https://vignette.wikia.nocookie.net/gameofthrones/images/3/34/Eddard_Stark.jpg/revision/latest?cb=20190701140812',
     number_of_kids: 5,
     killed_off: true,
     house: 'Stark',
@@ -8,6 +9,7 @@ module.exports = [
   },
   {
     name: 'Jon Snow',
+    image_url:'https://vignette.wikia.nocookie.net/gameofthrones/images/d/d0/JonSnow8x06.PNG/revision/latest?cb=20190714094440',
     number_of_kids: 0,
     killed_off: false,
     house: 'Stark',
@@ -15,6 +17,7 @@ module.exports = [
   },
   {
     name: 'Tyrion Lannister',
+    image_url: 'https://vignette.wikia.nocookie.net/gameofthrones/images/9/95/HandoftheKingTyrionLannister.PNG/revision/latest?cb=20190520175204',
     number_of_kids: 0,
     killed_off: false,
     house: 'Lannister',
@@ -22,6 +25,7 @@ module.exports = [
   },
   {
     name: 'Cersei Lannister',
+    image_url: 'https://vignette.wikia.nocookie.net/gameofthrones/images/b/b0/CERSEIBATTLEOFKINGSLANDING.PNG/revision/latest?cb=20190906021534',
     number_of_kids: 3,
     killed_off: true,
     house: 'Lannister',
@@ -29,6 +33,7 @@ module.exports = [
   },
   {
     name: 'Daenerys Targaryen',
+    image_url: 'https://vignette.wikia.nocookie.net/gameofthrones/images/f/fc/705_Daenerys_Painted_Table.jpg/revision/latest?cb=20170812013711',
     number_of_kids: 1,
     killed_off: true,
     house: 'Targaryen',
