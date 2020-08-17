@@ -13,7 +13,7 @@ module.exports = [
     number_of_kids: 0,
     killed_off: false,
     house: 'Stark',
-    description: 'Jon Snow is the bastard son of Eddard Stark, Lord of Winterfell. He has five half-siblings: Robb, Sansa, Arya, Bran, and Rickon Stark. Unaware of the identity of his mother,[9] Jon was raised at Winterfell. At the age of fourteen, he joins the Night\'s Watch, where he earns the nickname Lord Snow.'
+    description: 'Jon Snow is the bastard son of Eddard Stark, Lord of Winterfell. He has five half-siblings: Robb, Sansa, Arya, Bran, and Rickon Stark. Unaware of the identity of his mother, Jon was raised at Winterfell. At the age of fourteen, he joins the Night\'s Watch, where he earns the nickname Lord Snow.'
   },
   {
     name: 'Tyrion Lannister',
