@@ -2,6 +2,7 @@ const client = require('../lib/client');
 // import our seed data:
 const got = require('./got.js');
 const usersData = require('./users.js');
+const housesData = require('./houses.js');
 const { getEmoji } = require('../lib/emoji.js');
 
 run();
@@ -23,14 +24,24 @@ async function run() {
     );
       
     const user = users[0].rows[0];
+    
+    await Promise.all(
+      housesData.map(house => {
+        return client.query(`
+                      INSERT INTO houses (house)
+                      VALUES ($1);
+                  `,
+        [house.house]);
+      })
+    );
 
     await Promise.all(
       got.map(character => {
         return client.query(`
-                    INSERT INTO got (name, image_url, number_of_kids, killed_off, house, description, owner_id)
+                    INSERT INTO got (name, image_url, number_of_kids, killed_off, description, owner_id, house_id)
                     VALUES ($1, $2, $3, $4, $5, $6, $7);
                 `,
-        [character.name, character.image_url, character.number_of_kids, character.killed_off, character.house, character.description, user.id]);
+        [character.name, character.image_url, character.number_of_kids, character.killed_off, character.description, user.id, character.house_id]);
       })
     );
     

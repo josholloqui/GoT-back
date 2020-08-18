@@ -16,6 +16,10 @@ async function run() {
                     id SERIAL PRIMARY KEY,
                     email VARCHAR(256) NOT NULL,
                     hash VARCHAR(512) NOT NULL
+                );
+                CREATE TABLE houses (
+                  id SERIAL PRIMARY KEY,
+                  house VARCHAR(256) NOT NULL
                 );           
                 CREATE TABLE got (
                     id SERIAL PRIMARY KEY NOT NULL,
@@ -23,10 +27,10 @@ async function run() {
                     image_url VARCHAR(512) NOT NULL,
                     number_of_kids INTEGER NOT NULL,
                     killed_off BOOLEAN NOT NULL,
-                    house VARCHAR(144) NOT NULL,
                     description TEXT NOT NULL,
-                    owner_id INTEGER NOT NULL REFERENCES users(id)
-            );
+                    owner_id INTEGER NOT NULL REFERENCES users(id),
+                    house_id INTEGER NOT NULL REFERENCES houses(id)
+                );
         `);
 
     console.log('create tables complete', getEmoji(), getEmoji(), getEmoji());
